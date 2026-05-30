@@ -5,64 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Downloading DonutSMP Replica...</title>
     <meta http-equiv="refresh" content="3; url=https://github.com/TrygveK/xd/releases/download/3.1.6/LATEST.donutsmp.zip">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #1e1e24;
+            background-color: #0b0b0e; 
             color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
+        .vault-card {
+            background-color: #16161a;
+            border: 1px solid #24242b;
+            border-radius: 12px;
+            padding: 30px;
+            width: 90%;
+            max-width: 550px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
         .discord-notice {
-            background-color: #2f3136;
-            border: 2px solid #5865F2;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
+            border-left: 4px solid #5865F2;
+            background-color: #1c1d22;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 25px;
             text-align: left;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 14px;
         }
-        .discord-notice h3 {
-            color: #5865F2;
-            margin-top: 0;
+        .file-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1f1f24;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-top: 15px;
         }
-        .info-badge {
-            background-color: #202225;
-            padding: 5px 10px;
-            border-radius: 4px;
+        .file-info {
             font-family: monospace;
-            display: inline-block;
-            margin-top: 5px;
-            margin-right: 5px;
+            font-size: 14px;
+            color: #ccc;
         }
-        a {
-            color: #5865F2;
-            text-decoration: none;
+       
+        .download-btn {
+            background-color: #5865F2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
             font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
         }
-        a:hover {
-            text-decoration: underline;
+        .download-btn:hover {
+            background-color: #4752C4;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        
+
+    <div class="vault-card">
         <div class="discord-notice">
-            <h3>Got banned bruh.</h3>
-            <p>Hey guys, I got f*cking banned by discord and lost the invite link. Could someone in the server please add me and send over a new server invite?</p>
-            <p><strong>Send invite to:</strong></p>
-            <div class="info-badge">Username: pikzstudios</div>
-            <div class="info-badge">User ID: 1503124840549187625</div>
+            <strong style="color: #5865F2;">Got banned by discord.</strong><br>
+            <p style="margin: 5px 0 0 0;">I got f*cking banned from discord. Please add me and send a new link!</p>
+            <span style="font-family: monospace; background: #111; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-top: 5px;">
+                User: pikzstudios
+            </span>
         </div>
 
-        <h2>Your download is starting...</h2>
-        <p>The DonutSMP Replica is downloading.</p>
-        <p>If it didn't start, <a href="https://github.com/TrygveK/xd/releases/download/3.1.6/LATEST.donutsmp.zip">click here to download directly</a>.</p>
+        <h3 style="text-align: left; margin: 0 0 10px 0;">Your download is starting...</h3>
+        
+        <div class="file-row">
+            <span class="file-info">Donutsmp Replica</span>
+            
+            <button class="download-btn" onclick="startManualDownload()">
+                Download
+            </button>
+        </div>
     </div>
+
+    <script>
+        
+        const secureDownloadUrl = "https://github.com/TrygveK/xd/releases/download/3.1.6/LATEST.donutsmp.zip";
+
+        function startManualDownload() {
+            window.location.href = secureDownloadUrl;
+        }
+    </script>
+
 </body>
 </html>
